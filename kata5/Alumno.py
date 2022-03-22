@@ -5,23 +5,16 @@
         ##############################################
 '''
 
-class Alumno():
-    # Atributos de clase
-    nombre: str
-    apellidos: str
-    __dni: str
-    edad: int
-    notas = []
-    asignaturas = []
+from kata5.Usuario import Usuario
+
+class Alumno(Usuario):
+    asignatura: str
 
     # Constructor de clase
-    def __init__(self, newNom, newApe, newDni, newEdad): # Atributos de instancia
-        self.nombre = newNom
-        self.apellidos = newApe
-        self.__dni = newDni
-        self.edad = newEdad
-        self.notas = []
-        self.asignaturas = []
+    def __init__(self, newNom, newApe, newAsig):
+        super().__init__(newNom, newApe)
+        self.asignatura = newAsig
+
 
     # Métodos de clase
     def saludar(self):
