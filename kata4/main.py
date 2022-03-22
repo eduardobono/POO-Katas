@@ -52,5 +52,3 @@ if __name__ == '__main__':
     cl1.__id = 115
 
     print(cl1.id)
-
-    print(dir(cl1))
